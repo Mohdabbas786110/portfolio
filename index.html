@@ -1,14 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Mohd Abbas | Data Analyst & Python Developer</title>
+  <title>Mohd Abbas | Data Analyst &amp; Python Developer</title>
 
   <meta name="description" content="Mohd Abbas — Final-year B.Tech CSE student graduating in 2027, working on data analytics projects, internships, Python development and business intelligence.">
-
   <meta name="theme-color" content="#0b0d12">
   <meta name="author" content="Mohd Abbas">
 
@@ -17,299 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-
-  <!-- Professional animations and responsive navigation -->
-  <style>
-    :root {
-      --portfolio-gold: #d4a853;
-      --portfolio-gold-light: #f1d18b;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 100px;
-    }
-
-    body {
-      overflow-x: hidden;
-    }
-
-    ::selection {
-      background: var(--portfolio-gold);
-      color: #111;
-    }
-
-    /* NAVIGATION */
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-    }
-
-    .logo {
-      flex-shrink: 0;
-      text-decoration: none;
-    }
-
-    .nav nav {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .nav nav a {
-      transition: color 0.25s ease, opacity 0.25s ease;
-    }
-
-    .nav nav a:hover {
-      color: var(--portfolio-gold);
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-shrink: 0;
-    }
-
-    .theme-toggle,
-    .menu {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 42px;
-      height: 42px;
-      padding: 0;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: var(--card);
-      color: var(--text);
-      cursor: pointer;
-      font-size: 19px;
-      transition: transform 0.25s ease,
-                  border-color 0.25s ease,
-                  background 0.25s ease;
-    }
-
-    .theme-toggle:hover,
-    .menu:hover {
-      transform: translateY(-2px);
-      border-color: var(--portfolio-gold);
-    }
-
-    .menu {
-      display: none;
-    }
-
-    /* HERO ANIMATION */
-    .hero-text .eyebrow {
-      animation: fade-up 0.7s ease both;
-    }
-
-    .hero-text h1 {
-      animation: fade-up 0.8s 0.1s ease both;
-    }
-
-    .hero-text h2 {
-      animation: fade-up 0.8s 0.2s ease both;
-    }
-
-    .hero-text .intro {
-      animation: fade-up 0.8s 0.3s ease both;
-    }
-
-    .hero-text .buttons {
-      animation: fade-up 0.8s 0.4s ease both;
-    }
-
-    .hero-card {
-      animation: fade-in 1s 0.25s ease both;
-    }
-
-    .hero-card .avatar img {
-      transition: transform 0.5s ease;
-    }
-
-    .hero-card:hover .avatar img {
-      transform: scale(1.04);
-    }
-
-    /* SCROLL REVEAL: compatible with script.js */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .reveal.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* INTERACTIVE CARDS */
-    .skill-card,
-    .internship-card,
-    .analytics-card,
-    .project,
-    .timeline-item {
-      transition: transform 0.3s ease,
-                  border-color 0.3s ease,
-                  box-shadow 0.3s ease;
-    }
-
-    .skill-card:hover,
-    .internship-card:hover,
-    .analytics-card:hover,
-    .project:hover {
-      transform: translateY(-5px);
-      border-color: var(--portfolio-gold);
-    }
-
-    .tags span,
-    .soft-list span {
-      transition: background 0.25s ease, color 0.25s ease;
-    }
-
-    .tags span:hover,
-    .soft-list span:hover {
-      background: var(--portfolio-gold);
-      color: #111;
-    }
-
-    .btn,
-    .live-link,
-    .email {
-      transition: transform 0.25s ease, opacity 0.25s ease;
-    }
-
-    .btn:hover,
-    .live-link:hover {
-      transform: translateY(-2px);
-    }
-
-    .email {
-      overflow-wrap: anywhere;
-    }
-
-    /* MOBILE NAVIGATION */
-    @media (max-width: 800px) {
-      .nav {
-        gap: 10px;
-      }
-
-      .nav-actions {
-        margin-left: auto;
-      }
-
-      .menu {
-        display: inline-flex;
-      }
-
-      .theme-toggle,
-      .menu {
-        position: relative;
-        z-index: 1002;
-      }
-
-      .nav nav {
-        display: none;
-        position: absolute;
-        top: calc(100% + 8px);
-        left: 12px;
-        right: 12px;
-        max-height: calc(100vh - 100px);
-        overflow-y: auto;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 12px;
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        background: var(--card);
-        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
-        z-index: 1001;
-      }
-
-      .nav nav.open {
-        display: flex;
-        animation: menu-appear 0.22s ease both;
-      }
-
-      .nav nav a {
-        display: block;
-        padding: 13px 12px;
-        border-radius: 9px;
-      }
-
-      .nav nav a:hover {
-        background: rgba(212, 168, 83, 0.10);
-      }
-
-      .hero {
-        gap: 32px;
-      }
-
-      .hero-text h1 {
-        line-height: 1.15;
-      }
-    }
-
-    @keyframes fade-up {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fade-in {
-      from {
-        opacity: 0;
-        transform: translateX(16px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes menu-appear {
-      from {
-        opacity: 0;
-        transform: translateY(-6px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Respect accessibility preferences */
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
-    }
-  </style>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -317,7 +23,7 @@
   <!-- NAVIGATION -->
   <header class="nav">
     <a class="logo" href="#home" aria-label="Mohd Abbas home">
-      MAR<span>.</span>
+      M.ABBAS<span>.</span>
     </a>
 
     <nav id="mainNav" aria-label="Main navigation">
@@ -355,6 +61,7 @@
 
     <!-- HERO -->
     <section id="home" class="hero">
+
       <div class="hero-text reveal">
         <p class="eyebrow">DATA ANALYST · PYTHON DEVELOPER</p>
 
@@ -371,13 +78,6 @@
         <div class="buttons">
           <a class="btn primary" href="#experience">View Experience</a>
           <a class="btn ghost" href="#contact">Contact Me</a>
-        </div>
-
-        <div class="tags" aria-label="Key skills">
-          <span>Python</span>
-          <span>SQL</span>
-          <span>Excel</span>
-          <span>Power BI</span>
         </div>
       </div>
 
@@ -396,14 +96,12 @@
           <span></span> Open to relevant opportunities
         </div>
 
-        <h3>Data Analytics & Development</h3>
-
-        <p>
-          Python · SQL · Excel · Power BI · Tableau · Flask
+        <p class="profile-summary">
+          Final-year Computer Science student building practical
+          analytics and software projects.
         </p>
-
-        <a class="live-link" href="#projects">Explore My Work ↗</a>
       </div>
+
     </section>
 
     <!-- ABOUT -->
@@ -437,12 +135,12 @@
       <div class="skill-grid">
         <div class="skill-card">
           <strong>Python</strong>
-          <span>Programming & Analysis</span>
+          <span>Programming &amp; Analysis</span>
         </div>
 
         <div class="skill-card">
           <strong>Microsoft Excel</strong>
-          <span>Reporting & Data Analysis</span>
+          <span>Reporting &amp; Data Analysis</span>
         </div>
 
         <div class="skill-card">
@@ -466,7 +164,7 @@
         </div>
 
         <div class="skill-card">
-          <strong>Git & GitHub</strong>
+          <strong>Git &amp; GitHub</strong>
           <span>Version Control</span>
         </div>
 
@@ -536,7 +234,7 @@
             <span>Bug Tracking</span>
           </div>
 
-          <h3 class="subhead">Work & Responsibilities</h3>
+          <h3 class="subhead">Work &amp; Responsibilities</h3>
 
           <p>
             Prepared an Excel report, documented QA checks and test cases,
@@ -592,7 +290,7 @@
         <article class="analytics-card">
           <div class="project-number">02</div>
 
-          <h3>Customer 360 & Marketing Attribution Platform</h3>
+          <h3>Customer 360 &amp; Marketing Attribution Platform</h3>
 
           <p>
             Assigned Nexvia project to plan a unified customer view using
@@ -623,7 +321,7 @@
     <!-- CERTIFICATES -->
     <section id="certificates" class="section reveal">
       <p class="eyebrow">05 — CERTIFICATES</p>
-      <h2>Certifications & Job Simulations</h2>
+      <h2>Certifications &amp; Job Simulations</h2>
 
       <div class="project-grid">
 
@@ -812,7 +510,7 @@
         <div class="timeline-item">
           <span>2023 — 2027</span>
           <div>
-            <h3>B.Tech — Computer Science & Engineering</h3>
+            <h3>B.Tech — Computer Science &amp; Engineering</h3>
             <p>SHRI RAMSWAROOP MEMORIAL UNIVERSITY</p>
             <p>Final-year student · Expected graduation: 2027</p>
           </div>
@@ -867,37 +565,10 @@
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER: JavaScript text removed to avoid mobile wrapping -->
   <footer>
-    © <span id="currentYear">2026</span> Er. Mohd Abbas · Built with HTML, CSS & JavaScript
+    © <span id="currentYear">2026</span> Er. Mohd Abbas · Built with HTML, CSS
   </footer>
-
-  <script src="script.js"></script>
-
-  <!-- Footer year and accessible mobile navigation -->
-  <script>
-    // Automatically keep the footer year current
-    const yearElement = document.getElementById("currentYear");
-
-    if (yearElement) {
-      yearElement.textContent = new Date().getFullYear();
-    }
-
-    // Close mobile navigation when a link is selected
-    const mainNav = document.getElementById("mainNav");
-    const menuButton = document.querySelector(".menu");
-
-    if (mainNav && menuButton) {
-      mainNav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          mainNav.classList.remove("open");
-          menuButton.setAttribute("aria-expanded", "false");
-          menuButton.setAttribute("aria-label", "Open menu");
-          menuButton.textContent = "☰";
-        });
-      });
-    }
-  </script>
 
 </body>
 </html>
