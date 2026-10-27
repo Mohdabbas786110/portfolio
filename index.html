@@ -14,23 +14,36 @@
 </head>
 
 <body>
-  <header class="nav">
-    <a class="logo" href="#home">MA<span>.</span></a>
-    <button class="menu" aria-label="Open menu">☰</button>
+  
+<!-- NAVIGATION -->
+<header class="nav">
+  <a class="logo" href="#home">MAR<span>.</span></a>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Data Analyst</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#projects">Developer</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <button class="menu" aria-label="Open menu" aria-expanded="false">☰</button>
 
-  <main>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Internships</a>
+    <a href="#analytics-projects">Analytics Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#projects">Developer</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      type="button"
+      aria-label="Switch to light theme"
+      title="Switch theme"
+    >☀️</button>
+  </nav>
+</header>
+
+<main>
+
     <!-- HOME -->
     <section id="home" class="hero">
       <div class="hero-text reveal">
@@ -137,14 +150,15 @@
       </div>
     </section>
 
-    <!-- DATA ANALYST EXPERIENCE -->
+    <!-- INTERNSHIPS -->
     <section id="experience" class="section reveal">
-      <p class="eyebrow">03 — DATA ANALYST</p>
-      <h2>Internships & Analytics Projects</h2>
+      <p class="eyebrow">03 — EXPERIENCE</p>
+      <h2>Internships</h2>
 
-      <div class="project-grid">
-        <!-- NEXVIA INTERNSHIP -->
-        <article class="project">
+      <div class="internship-grid">
+
+        <!-- NEXVIA -->
+        <article class="internship-card">
           <div class="project-number">01</div>
           <h3>Nexvia Technologies — Data Analytics Intern</h3>
 
@@ -153,52 +167,21 @@
             projects, technical skills, code quality and project deliverables.
           </p>
 
-          <div class="tags">
+          <div class="card-meta">
             <span>Remote Internship</span>
             <span>20 Oct – 20 Nov 2026</span>
             <span>In Progress</span>
           </div>
 
-          <h3>Project 1: Enterprise Business Intelligence Suite</h3>
           <p>
-            Assigned project to plan a multi-region business intelligence
-            solution combining sales, finance, HR and supply-chain data.
-            Planned scope includes data modelling, Power Query preparation,
-            DAX measures, KPI reporting and region-based access controls.
+            <strong>Responsibilities:</strong> Work on assigned analytics
+            projects, prepare deliverables and follow project requirements
+            and code-quality expectations.
           </p>
-
-          <div class="tags">
-            <span>Power BI</span>
-            <span>DAX</span>
-            <span>Power Query</span>
-            <span>SQL Server</span>
-            <span>Azure Data Factory</span>
-          </div>
-
-          <p><strong>Status:</strong> Assigned / In Progress</p>
-
-          <h3>Project 2: Customer 360 & Marketing Attribution Platform</h3>
-          <p>
-            Assigned project to plan a unified customer view using website,
-            app, CRM and advertising data. Planned scope includes customer
-            identity resolution, data modelling, RFM segmentation, customer
-            lifetime value analysis, marketing attribution and campaign ROI.
-          </p>
-
-          <div class="tags">
-            <span>BigQuery</span>
-            <span>dbt</span>
-            <span>Python</span>
-            <span>Tableau</span>
-            <span>GA4</span>
-          </div>
-
-          <p><strong>Status:</strong> Assigned / In Progress</p>
-          <p><strong>Deadline:</strong> 20 November 2026</p>
         </article>
 
-        <!-- RICOZ INTERNSHIP -->
-        <article class="project">
+        <!-- RICOZ -->
+        <article class="internship-card">
           <div class="project-number">02</div>
           <h3>RICOZ INNOVATION — Intern</h3>
 
@@ -215,38 +198,101 @@
             <span>Bug Tracking</span>
           </div>
 
-          <h3>Work & Responsibilities</h3>
+          <h3 class="subhead">Work & Responsibilities</h3>
+
           <p>
             Prepared an Excel report, documented QA checks and test cases,
-            recorded expected and actual outcomes, and maintained test
-            execution status using Pass, Fail and Blocked categories.
+            recorded expected and actual outcomes, and tracked execution
+            using Pass, Fail and Blocked categories.
+          </p>
+
+          <div class="card-meta">
+            <span>13 Oct 2026 – 13 Feb 2027</span>
+            <span>In Progress</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- DATA ANALYTICS PROJECTS -->
+    <section id="analytics-projects" class="section reveal">
+      <p class="eyebrow">04 — DATA ANALYTICS</p>
+      <h2>Analytics Projects</h2>
+
+      <div class="analytics-grid">
+
+        <!-- PROJECT 1 -->
+        <article class="analytics-card">
+          <div class="project-number">01</div>
+          <h3>Enterprise Business Intelligence Suite</h3>
+
+          <p>
+            Assigned Nexvia project to plan a multi-region business
+            intelligence solution combining sales, finance, HR and
+            supply-chain data.
+          </p>
+
+          <p>
+            <strong>Planned scope:</strong> Data modelling, Power Query
+            preparation, DAX measures, KPI reporting and region-based
+            access controls.
           </p>
 
           <div class="tags">
-            <span>Test Documentation</span>
-            <span>Execution Tracking</span>
-            <span>Issue Reporting</span>
+            <span>Power BI</span>
+            <span>DAX</span>
+            <span>Power Query</span>
+            <span>SQL Server</span>
+            <span>Azure Data Factory</span>
           </div>
 
-          <p>
-            <strong>Duration:</strong> Five-month internship
-          </p>
+          <p><strong>Status:</strong> Assigned / In Progress</p>
+          <p><strong>Deadline:</strong> 20 November 2026</p>
         </article>
+
+        <!-- PROJECT 2 -->
+        <article class="analytics-card">
+          <div class="project-number">02</div>
+          <h3>Customer 360 & Marketing Attribution Platform</h3>
+
+          <p>
+            Assigned Nexvia project to plan a unified customer view using
+            website, app, CRM and advertising data.
+          </p>
+
+          <p>
+            <strong>Planned scope:</strong> Customer identity resolution,
+            data modelling, RFM segmentation, customer lifetime value,
+            marketing attribution and campaign ROI.
+          </p>
+
+          <div class="tags">
+            <span>BigQuery</span>
+            <span>dbt</span>
+            <span>Python</span>
+            <span>Tableau</span>
+            <span>GA4</span>
+          </div>
+
+          <p><strong>Status:</strong> Assigned / In Progress</p>
+          <p><strong>Deadline:</strong> 20 November 2026</p>
+        </article>
+
       </div>
     </section>
 
     <!-- CERTIFICATES -->
     <section id="certificates" class="section reveal">
-      <p class="eyebrow">04 — CERTIFICATES</p>
+      <p class="eyebrow">05 — CERTIFICATES</p>
       <h2>Certifications & Job Simulations</h2>
 
       <div class="project-grid">
+
         <!-- TATA -->
         <article class="project">
           <div class="project-number">01</div>
-          
           <h3>Tata Group — GenAI Data Analytics Job Simulation</h3>
-
 
           <p>
             Completed a Forage job simulation focused on credit-card
@@ -300,49 +346,45 @@
           </a>
         </article>
 
-        
-<!-- INSIDERONE -->
-<article class="project">
-  <div class="project-number">03</div>
-  <h3>InsiderOne University — Data Analytics Associate Certificate</h3>
+        <!-- INSIDERONE -->
+        <article class="project">
+          <div class="project-number">03</div>
+          <h3>InsiderOne University — Data Analytics Associate Certificate</h3>
 
-  <p>
-    Completed the Data Analytics Associate learning programme,
-    consisting of eight learning units and an assessed project.
-  </p>
+          <p>
+            Completed the Data Analytics Associate learning programme,
+            consisting of eight learning units and an assessed project.
+          </p>
 
-  <div class="tags">
-    <span>Data Analytics</span>
-    <span>Learning Programme</span>
-    <span>Assessed Project</span>
-  </div>
+          <div class="tags">
+            <span>Data Analytics</span>
+            <span>Learning Programme</span>
+            <span>Assessed Project</span>
+          </div>
 
-  <p>
-    <strong>Certificate ID:</strong> IO-DAA-TEKZEVC4
-  </p>
+          <p><strong>Certificate ID:</strong> IO-DAA-TEKZEVC4</p>
+          <p><strong>Issued:</strong> 13 October 2026</p>
 
-  <p>
-    <strong>Issued:</strong> 13 October 2026
-  </p>
+          <a
+            class="live-link"
+            href="https://www.insiderone.in/c/IO-DAA-TEKZEVC4"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Certificate ↗
+          </a>
+        </article>
 
-  <a
-    class="live-link"
-    href="https://www.insiderone.in/c/IO-DAA-TEKZEVC4"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    View Certificate ↗
-  </a>
-</article>
-     </div>
-</section>
+      </div>
+    </section>
 
     <!-- DEVELOPER PROJECTS -->
     <section id="projects" class="section reveal">
-      <p class="eyebrow">05 — DEVELOPER</p>
+      <p class="eyebrow">06 — DEVELOPER</p>
       <h2>My Development Projects</h2>
 
       <div class="project-grid">
+
         <!-- NOHATUBE -->
         <article class="project">
           <div class="project-number">01</div>
@@ -378,8 +420,8 @@
           <h3>AbbasAI — Personal AI Assistant</h3>
 
           <p>
-            ABBASAI is a personal AI assistant project built with Python and
-            FastAPI, integrating the Gemini API. The project is being
+            AbbasAI is a personal AI assistant project built with Python
+            and FastAPI, integrating the Gemini API. The project is being
             developed with a focus on conversational AI and future
             capabilities such as voice interaction, chat history,
             file assistance and coding support.
@@ -430,12 +472,13 @@
             View on GitHub ↗
           </a>
         </article>
+
       </div>
     </section>
 
     <!-- EDUCATION -->
     <section id="education" class="section reveal">
-      <p class="eyebrow">06 — EDUCATION</p>
+      <p class="eyebrow">07 — EDUCATION</p>
       <h2>My Journey</h2>
 
       <div class="timeline">
@@ -467,7 +510,7 @@
 
     <!-- CONTACT -->
     <section id="contact" class="contact section reveal">
-      <p class="eyebrow">07 — CONTACT</p>
+      <p class="eyebrow">08 — CONTACT</p>
       <h2>Let's connect.</h2>
 
       <p>
@@ -494,8 +537,9 @@
         </a>
       </p>
     </section>
-  </main>
 
+
+  <!-- FOOTER -->
   <footer>
     © 2026 Er. Mohd Abbas · Built with HTML, CSS & JavaScript
   </footer>
