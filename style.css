@@ -1,4 +1,4 @@
-
+```css
 /* =========================
    GLOBAL STYLES
 ========================= */
@@ -15,6 +15,9 @@
   --muted: #a4a8b3;
   --line: #242733;
   --accent: #b8ff4d;
+  --nav-bg: rgba(7, 8, 12, 0.94);
+  --hero-card-bg: linear-gradient(145deg, #151821, #0c0e14);
+  --shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
 }
 
 html {
@@ -27,7 +30,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
-  transition: background .25s, color .25s;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 a {
@@ -52,9 +55,11 @@ button {
   justify-content: space-between;
   gap: 20px;
   padding: 12px 5%;
-  background: rgba(7, 8, 12, .92);
+  background: var(--nav-bg);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 .logo {
@@ -79,7 +84,7 @@ button {
   flex-shrink: 0;
   font-size: 12px;
   color: var(--muted);
-  transition: color .2s;
+  transition: color 0.2s ease;
 }
 
 .nav nav a:hover,
@@ -87,10 +92,10 @@ button {
   color: var(--accent);
 }
 
-/* Theme button: Contact ke just baad */
+/* Theme toggle button */
 .theme-toggle {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
@@ -99,15 +104,23 @@ button {
   border-radius: 50%;
   background: var(--card);
   color: var(--text);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1;
   padding: 0;
   cursor: pointer;
-  transition: transform .2s, background .2s, border-color .2s;
+  transition:
+    transform 0.2s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .theme-toggle:hover {
   transform: scale(1.08);
+}
+
+.theme-toggle:active {
+  transform: scale(0.94);
 }
 
 .theme-toggle:focus-visible,
@@ -132,7 +145,7 @@ button {
 .hero {
   min-height: calc(100vh - 72px);
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, .65fr);
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
   gap: 60px;
   align-items: center;
   padding: 80px 9%;
@@ -190,7 +203,7 @@ button {
   font-size: 13px;
   font-weight: 700;
   text-align: center;
-  transition: transform .2s, opacity .2s;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .btn:hover {
@@ -209,12 +222,13 @@ button {
 
 /* Hero profile card */
 .hero-card {
-  background: linear-gradient(145deg, #151821, #0c0e14);
+  background: var(--hero-card-bg);
   border: 1px solid var(--line);
   border-radius: 25px;
   padding: 30px;
   text-align: center;
-  box-shadow: 0 30px 90px rgba(0, 0, 0, .35);
+  box-shadow: var(--shadow);
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 .avatar {
@@ -266,6 +280,7 @@ button {
 .section {
   padding: 100px 9%;
   border-top: 1px solid var(--line);
+  transition: border-color 0.25s ease;
 }
 
 .section h2 {
@@ -305,6 +320,7 @@ button {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 12px;
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 .skill-card strong {
@@ -353,7 +369,10 @@ button {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 15px;
-  transition: border-color .25s, transform .25s;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .project:hover {
@@ -398,11 +417,11 @@ button {
 }
 
 /* =========================
-   INTERNSHIP TIMELINE
+   EDUCATION TIMELINE
 ========================= */
 .timeline {
   max-width: 900px;
-  border-left: 1px solid #333844;
+  border-left: 1px solid var(--line);
   padding-left: 28px;
 }
 
@@ -445,8 +464,7 @@ button {
 }
 
 /* =========================
-   SEPARATE INTERNSHIP AND
-   ANALYTICS PROJECT CARDS
+   INTERNSHIP AND ANALYTICS
 ========================= */
 .internship-grid,
 .analytics-grid {
@@ -465,7 +483,10 @@ button {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 15px;
-  transition: border-color .25s, transform .25s;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .internship-card:hover,
@@ -525,7 +546,10 @@ button {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 15px;
-  transition: transform .25s, border-color .25s;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .certificate-card:hover {
@@ -546,7 +570,7 @@ button {
 }
 
 /* =========================
-   EDUCATION
+   EDUCATION CARDS
 ========================= */
 .education-grid {
   display: grid;
@@ -560,6 +584,7 @@ button {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 12px;
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
 
 .education-card h3 {
@@ -605,9 +630,7 @@ button {
 }
 
 /* =========================
-   LIGHT THEME
-   JavaScript body.light-theme
-   class add karega
+   DARK / LIGHT THEME
 ========================= */
 body.light-theme {
   --bg: #f5f6f8;
@@ -615,16 +638,32 @@ body.light-theme {
   --text: #111318;
   --muted: #555b67;
   --line: #dfe2e8;
+  --nav-bg: rgba(245, 246, 248, 0.96);
+  --hero-card-bg: linear-gradient(145deg, #ffffff, #f0f2f5);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+
+  background: #f5f6f8;
+  color: #111318;
 }
 
 body.light-theme .nav {
-  background: rgba(245, 246, 248, .94);
+  background: var(--nav-bg);
   border-bottom-color: #e0e2e8;
 }
 
+body.light-theme .nav nav a {
+  color: #555b67;
+}
+
+body.light-theme .nav nav a:hover,
+body.light-theme .nav nav a:focus-visible {
+  color: #537c15;
+}
+
 body.light-theme .hero-card {
-  background: linear-gradient(145deg, #ffffff, #f0f2f5);
-  box-shadow: 0 30px 90px rgba(0, 0, 0, .08);
+  background: var(--hero-card-bg);
+  box-shadow: var(--shadow);
+  border-color: #dfe2e8;
 }
 
 body.light-theme .avatar {
@@ -636,8 +675,19 @@ body.light-theme .section {
   border-top-color: #e5e7eb;
 }
 
+body.light-theme .skill-card,
+body.light-theme .project,
+body.light-theme .internship-card,
+body.light-theme .analytics-card,
+body.light-theme .certificate-card,
+body.light-theme .education-card {
+  background: #ffffff;
+  border-color: #dfe2e8;
+}
+
 body.light-theme .ghost {
-  color: var(--text);
+  color: #111318;
+  border-color: #dfe2e8;
 }
 
 body.light-theme .theme-toggle {
@@ -646,8 +696,22 @@ body.light-theme .theme-toggle {
   border-color: #dfe2e8;
 }
 
+body.light-theme .timeline {
+  border-left-color: #d1d5db;
+}
+
+body.light-theme .timeline-item::before {
+  background: var(--accent);
+}
+
+body.light-theme .soft-list span,
+body.light-theme .tags span,
+body.light-theme .card-meta span {
+  border-color: #dfe2e8;
+}
+
 body.light-theme footer {
-  color: #656b76;
+  color: #555b67;
   border-top-color: #e5e7eb;
 }
 
@@ -657,9 +721,10 @@ body.light-theme footer {
 footer {
   text-align: center;
   padding: 25px;
-  color: #666b76;
+  color: var(--muted);
   font-size: 11px;
   border-top: 1px solid var(--line);
+  transition: color 0.25s ease, border-color 0.25s ease;
 }
 
 /* =========================
@@ -668,7 +733,7 @@ footer {
 .reveal {
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity .7s ease, transform .7s ease;
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .reveal.show {
@@ -677,7 +742,7 @@ footer {
 }
 
 /* =========================
-   TABLET & MOBILE
+   TABLET
 ========================= */
 @media (max-width: 1050px) {
   .nav {
@@ -706,6 +771,9 @@ footer {
   }
 }
 
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 800px) {
   .nav {
     min-height: 72px;
@@ -788,6 +856,9 @@ footer {
   }
 }
 
+/* =========================
+   SMALL MOBILE
+========================= */
 @media (max-width: 430px) {
   .hero h1 {
     font-size: 42px;
@@ -838,7 +909,7 @@ footer {
 }
 
 /* =========================
-   REDUCED MOTION ACCESSIBILITY
+   ACCESSIBILITY
 ========================= */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -848,8 +919,9 @@ footer {
   *,
   *::before,
   *::after {
-    transition-duration: .01ms !important;
-    animation-duration: .01ms !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
+```
